@@ -1,0 +1,18 @@
+in_file=input(" enter the input file name:")
+out_file=input("enter the out put file name")
+f=open(in_file,'r',encoding='utf8')
+t=f.read()
+#print(t)
+f.close()
+s1=input("Enter  the string to search:")
+s1_count=t.count(s1)
+if s1_count==0:
+    print("string not found ")
+else:
+    print("string found \n")
+    print("the count of the string is :",s1_count)
+    s2=input("enter the sring to replace:")
+    t=t.replace(s1,s2)
+f=open(out_file,'w',encoding='utf8')
+f.write(t)
+f.close()
